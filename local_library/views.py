@@ -1,3 +1,9 @@
+from django.http import HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
+
+def sign_in(request, username, password):
+    temp = False
+    if username == "nvd" and password == "nvd":
+        temp = True
+    return HttpResponse(temp)
